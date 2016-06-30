@@ -1,6 +1,11 @@
 #include "processingtool.h"
 
-ProcessingTool::ProcessingTool(QObject *parent) : QObject(parent)
+
+
+
+
+ProcessingTool::ProcessingTool(DataStorage &in, QObject *parent) : QObject(parent)
    {
+   setInputStorage(in);
 
    }

@@ -4,6 +4,7 @@
 #
 #-------------------------------------------------
 
+QT += core gui opengl
 TARGET = Processing
 TEMPLATE = lib
 
@@ -20,15 +21,22 @@ QMAKE_CXXFLAGS += -std=c++11 -opengl -std=gnu++11
 DEFINES += PROCESSING_LIBRARY
 
 SOURCES += processing.cpp \
-    processingtool.cpp \
-    drawassist.cpp
+           processingtool.cpp \
+           drawassist.cpp \
+    graphicwindow.cpp \
+    primalwindow.cpp
 
 HEADERS += processing.h\
-        processing_global.h \
-    processingtool.h \
-    drawassist.h
+           processing_global.h \
+           processingtool.h \
+           drawassist.h \
+    graphicwindow.h \
+    primalwindow.h
 
 unix {
     target.path = /usr/lib
     INSTALLS += target
 }
+
+FORMS += \
+    graphicwindow.ui
